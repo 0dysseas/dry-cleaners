@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
 
-def home(request):
-    return HttpResponse('Dry Cleaners')
-
+def index(request):
+    # return HttpResponse('Dry Cleaners')
+    return render(request, 'index.html')
 
