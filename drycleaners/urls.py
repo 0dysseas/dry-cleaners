@@ -20,5 +20,6 @@ from cleaners import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^one_page$', views.one_page, name='one_page'),
     url(r'^admin/', admin.site.urls),
 ]
