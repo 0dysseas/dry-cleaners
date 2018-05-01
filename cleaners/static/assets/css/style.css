@@ -550,6 +550,7 @@ a {
 .probootstrap-animate {
   opacity: 0;
   visibility: hidden; }
+
 #section-services{
       border-top: 1px solid #e6e6e6;
 }
@@ -557,7 +558,60 @@ a {
   padding-top: 60px;
 }
 
-#map {
-  height: 400px;
+/*Contact*/
+.content-header{
+  font-family: 'Oleo Script', cursive;
+  color:#fcc500;
+  font-size: 45px;
+}
+
+.section-content{
+  text-align: center;
+
+}
+#contact{
+
+  font-family: 'Teko', sans-serif;
+  padding-top: 10px;
   width: 100%;
- }
+  width: 100vw;
+  height: 550px;
+  background: #554d6e;
+  color : #fff;
+}
+.contact-section{
+  padding-top: 1px;
+}
+.contact-section .col-md-6{
+  width: 50%;
+}
+
+.form-line{
+  border-right: 1px solid #B29999;
+}
+
+.form-group{
+  margin-top: 10px;
+}
+label{
+  font-size: 1.3em;
+  line-height: 1em;
+  font-weight: normal;
+}
+.form-control{
+  font-size: 1.3em;
+  color: #080808;
+}
+textarea.form-control {
+    height: 135px;
+   /* margin-top: px;*/
+}
+
+/*.submit-contact{*/
+  /*font-size: 1.1em;*/
+  /*float: right;*/
+  /*width: 150px;*/
+  /*background-color: transparent;*/
+  /*color: #fff;*/
+
+/*}*/

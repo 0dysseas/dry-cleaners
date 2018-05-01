@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import ContactForm
 
 
 def index(request):
@@ -18,7 +19,8 @@ def pick_up(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    contact_form = ContactForm()
+    return render(request, 'contact.html', {'form': contact_form})
 
 
 def one_page(request):
