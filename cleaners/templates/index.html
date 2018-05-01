@@ -18,79 +18,59 @@
             <div class="row mb-3">
               <div class="col-md">
                 <div class="form-group">
-                  <label for="id_label_single">From</label>
+                  <label for="id_label_single">Carpet Type</label>
 
                   <label for="id_label_single" style="width: 100%;">
                     <select class="js-example-basic-single js-states form-control" id="id_label_single" style="width: 100%;">
-                      <option value="Australia">Australia</option>
-                      <option value="Japan">Japan</option>
-                      <option value="United States">United States</option>
-                      <option value="Brazil">Brazil</option>
-                      <option value="China">China</option>
-                      <option value="Israel">Israel</option>
-                      <option value="Philippines">Philippines</option>
-                      <option value="Malaysia">Malaysia</option>
-                      <option value="Canada">Canada</option>
-                      <option value="Chile">Chile</option>
-                      <option value="Chile">Zimbabwe</option>
+                      <option value="Carpet1">Carpet1</option>
+                      <option value="Carpet2">Carpet2</option>
+                      <option value="Carpet3">Carpet3</option>
+                      <option value="Carpet4">Carpet4</option>
                     </select>
                   </label>
 
 
                 </div>
               </div>
+              <!-- END carpet type row -->
+
               <div class="col-md">
                 <div class="form-group">
-                  <label for="id_label_single2">To</label>
+                  <label for="id_label_single2">Carpet Type 2</label>
                   <div class="probootstrap_select-wrap">
                     <label for="id_label_single2" style="width: 100%;">
                     <select class="js-example-basic-single js-states form-control" id="id_label_single2" style="width: 100%;">
-                      <option value="Australia">Australia</option>
-                      <option value="Japan">Japan</option>
-                      <option value="United States">United States</option>
-                      <option value="Brazil">Brazil</option>
-                      <option value="China">China</option>
-                      <option value="Israel">Israel</option>
-                      <option value="Philippines">Philippines</option>
-                      <option value="Malaysia">Malaysia</option>
-                      <option value="Canada">Canada</option>
-                      <option value="Chile">Chile</option>
-                      <option value="Chile">Zimbabwe</option>
+                      <option value="Carpet2_1">Carpet2_1</option>
+                      <option value="Carpet2_2">Carpet2_2</option>
+                      <option value="Carpet2_3">Carpet2_3</option>
                     </select>
                   </label>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- END row -->
+            <!-- END carpet type 2row -->
+
             <div class="row mb-5">
               <div class="col-md">
                 <div class="form-group">
-                  <label for="probootstrap-date-departure">Departure</label>
-                  <div class="probootstrap-date-wrap">
-                    <span class="icon ion-calendar"></span>
-                    <input type="text" id="probootstrap-date-departure" class="form-control" placeholder="">
-                  </div>
-                </div>
-              </div>
-              <div class="col-md">
-                <div class="form-group">
-                  <label for="probootstrap-date-arrival">Arrival</label>
-                  <div class="probootstrap-date-wrap">
-                    <span class="icon ion-calendar"></span>
-                    <input type="text" id="probootstrap-date-arrival" class="form-control" placeholder="">
+                  <label for="probootstrap-meters">Meters</label>
+                  <div class="probootstrap-meters">
+{#                    <span class="icon ion-calendar"></span>#}
+                    <input type="text" id="probootstrap-meters" class="form-control" placeholder="">
                   </div>
                 </div>
               </div>
             </div>
-            <!-- END row -->
+            <!-- END meters row -->
+
             <div class="row">
               <div class="col-md">
-                <label for="round" class="mr-5"><input type="radio" id="round" name="direction">  Round</label>
-                <label for="oneway"><input type="radio" id="oneway" name="direction">  Oneway</label>
+                <label for="option1" class="mr-5"><input type="radio" id="option1" name="direction">  Option1</label>
+                <label for="option2"><input type="radio" id="option2" name="direction">  Option2</label>
               </div>
               <div class="col-md">
-                <input type="submit" value="Submit" class="btn btn-primary btn-block">
+                <input type="submit" value="Calculate" class="btn btn-primary btn-block">
               </div>
             </div>
           </div>
@@ -136,7 +116,7 @@
     <div class="row">
       <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
         <a href="#" class="probootstrap-thumbnail">
-          <img src="{% static 'assets/images/img_1.jpg' %}" alt="Free Template by ProBootstrap.com" class="img-fluid">
+          <img src="{% static 'assets/images/img_1.jpg' %}" alt="air-baloon" class="img-fluid">
           <div class="probootstrap-text">
             <h3>Buena</h3>
           </div>
@@ -144,19 +124,19 @@
       </div>
       <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
         <a href="#" class="probootstrap-thumbnail">
-          <img src="{% static 'assets/images/img_2.jpg' %}" alt="Free Template by ProBootstrap.com" class="img-fluid">
+          <img src="{% static 'assets/images/img_2.jpg' %}" alt="street" class="img-fluid">
           <h3>Road</h3>
         </a>
       </div>
       <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
         <a href="#" class="probootstrap-thumbnail">
-          <img src="{% static 'assets/images/img_3.jpg' %}" alt="Free Template by ProBootstrap.com" class="img-fluid">
+          <img src="{% static 'assets/images/img_3.jpg' %}" alt="airplane-wing" class="img-fluid">
           <h3>Australia</h3>
         </a>
       </div>
       <div class="col-lg-3 col-md-6 probootstrap-animate mb-3">
         <a href="#" class="probootstrap-thumbnail">
-          <img src="{% static 'assets/images/img_4.jpg' %}" alt="Free Template by ProBootstrap.com" class="img-fluid">
+          <img src="{% static 'assets/images/img_4.jpg' %}" alt="temple" class="img-fluid">
           <h3>Japan</h3>
         </a>
       </div>
@@ -346,7 +326,7 @@
           <p class="lead mb-4"><em>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</em></p>
           <p class="probootstrap-author">
             <a href="https://probootstrap.com/" target="_blank">
-              <img src="{% static 'assets/images/person_1.jpg' %}" alt="Free Template by ProBootstrap.com" class="rounded-circle">
+              <img src="{% static 'assets/images/person_1.jpg' %}" alt="person-glasses" class="rounded-circle">
               <span class="probootstrap-name">James Smith</span>
               <span class="probootstrap-title">Chief Executive Officer</span>
             </a>
@@ -436,7 +416,7 @@
         <div class="owl-carousel js-owl-carousel-2">
           <div>
             <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-              <img src="{% static 'assets/images/sq_img_2.jpg' %}" alt="Free Template by ProBootstrap" class="img-fluid">
+              <img src="{% static 'assets/images/sq_img_2.jpg' %}" alt="street-2" class="img-fluid">
               <div class="media-body">
                 <h5 class="mb-3">02. Service Title Here</h5>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -447,7 +427,7 @@
 
           <div>
             <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-              <img src="{% static 'assets/images/sq_img_1.jpg' %}" alt="Free Template by ProBootstrap" class="img-fluid">
+              <img src="{% static 'assets/images/sq_img_1.jpg' %}" alt="air-baloon-2" class="img-fluid">
               <div class="media-body">
                 <h5 class="mb-3">02. Service Title Here</h5>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -458,7 +438,7 @@
 
           <div>
             <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-              <img src="{% static 'assets/images/sq_img_3.jpg' %}" alt="Free Template by ProBootstrap" class="img-fluid">
+              <img src="{% static 'assets/images/sq_img_3.jpg' %}" alt="wings-2" class="img-fluid">
               <div class="media-body">
                 <h5 class="mb-3">02. Service Title Here</h5>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -469,7 +449,7 @@
 
           <div>
             <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-              <img src="{% static 'assets/images/sq_img_4.jpg' %}" alt="Free Template by ProBootstrap" class="img-fluid">
+              <img src="{% static 'assets/images/sq_img_4.jpg' %}" alt="temple-2" class="img-fluid">
               <div class="media-body">
                 <h5 class="mb-3">02. Service Title Here</h5>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -480,7 +460,7 @@
 
           <div>
             <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-              <img src="{% static 'assets/images/sq_img_5.jpg' %}" alt="Free Template by ProBootstrap" class="img-fluid">
+              <img src="{% static 'assets/images/sq_img_5.jpg' %}" alt="eiffel-2" class="img-fluid">
               <div class="media-body">
                 <h5 class="mb-3">02. Service Title Here</h5>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -492,7 +472,7 @@
 
           <div>
             <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-              <img src="{% static 'assets/images/sq_img_2.jpg' %}" alt="Free Template by ProBootstrap" class="img-fluid">
+              <img src="{% static 'assets/images/sq_img_2.jpg' %}" alt="street-2" class="img-fluid">
               <div class="media-body">
                 <h5 class="mb-3">02. Service Title Here</h5>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -503,7 +483,7 @@
 
           <div>
             <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-              <img src="{% static 'assets/images/sq_img_1.jpg' %}" alt="Free Template by ProBootstrap" class="img-fluid">
+              <img src="{% static 'assets/images/sq_img_1.jpg' %}" alt="air-baloon-2" class="img-fluid">
               <div class="media-body">
                 <h5 class="mb-3">02. Service Title Here</h5>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -514,7 +494,7 @@
 
           <div>
             <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-              <img src="{% static 'assets/images/sq_img_3.jpg' %}" alt="Free Template by ProBootstrap" class="img-fluid">
+              <img src="{% static 'assets/images/sq_img_3.jpg' %}" alt="wing-2" class="img-fluid">
               <div class="media-body">
                 <h5 class="mb-3">02. Service Title Here</h5>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -525,7 +505,7 @@
 
           <div>
             <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-              <img src="{% static 'assets/images/sq_img_4.jpg' %}" alt="Free Template by ProBootstrap" class="img-fluid">
+              <img src="{% static 'assets/images/sq_img_4.jpg' %}" alt="temple-2" class="img-fluid">
               <div class="media-body">
                 <h5 class="mb-3">02. Service Title Here</h5>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -536,7 +516,7 @@
 
           <div>
             <div class="media probootstrap-media d-block align-items-stretch mb-4 probootstrap-animate">
-              <img src="{% static 'assets/images/sq_img_5.jpg' %}" alt="Free Template by ProBootstrap" class="img-fluid">
+              <img src="{% static 'assets/images/sq_img_5.jpg' %}" alt="eiffel-2" class="img-fluid">
               <div class="media-body">
                 <h5 class="mb-3">02. Service Title Here</h5>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
