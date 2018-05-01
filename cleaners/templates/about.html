@@ -1,7 +1,33 @@
 {% extends "base_generic.html" %}
 
+{% load static %}
+
 {% block homeSection %}
-    <!-- About home section to be inserted here -->
+        <section class="probootstrap_section" id="section-feature-testimonial">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-12 text-center mb-5 probootstrap-animate about-page">
+            <h2 class="display-4 border-bottom probootstrap-section-heading">Why we Love Places</h2>
+            <blockquote class="">
+              <p class="lead mb-4"><em>About us text will go here. And it will look like this and like this and like this.
+                                       To be populated with more info. So more details about the business have to go
+              here. So this won't look so empty. At least four or five more sentences will go here in order to fill that
+              void. But we have to be careful as to what we will put here.</em></p>
+              <p class="probootstrap-author">
+                <a href={% static 'assets/images/person_1.jpg' %}" target="_blank">
+                  <img src="{% static 'assets/images/person_1.jpg' %}" alt="founder-face" class="rounded-circle">
+                  <span class="probootstrap-name">Aristides Papanikolaou</span>
+                  <span class="probootstrap-title">Founder</span>
+                </a>
+              </p>
+            </blockquote>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- END section -->
 {% endblock %}
 
 {% block content %}
