@@ -533,9 +533,9 @@ a {
     .owl-carousel .owl-dots .owl-dot.active {
       background: #00CA4C; }
 
-.probootstrap-date-wrap {
+.probootstrap-size-wrap {
   position: relative; }
-  .probootstrap-date-wrap .icon {
+  .probootstrap-size-wrap .icon {
     position: absolute;
     top: 50%;
     color: #ccc;
@@ -556,3 +556,8 @@ a {
 .about-page {
   padding-top: 60px;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+ }

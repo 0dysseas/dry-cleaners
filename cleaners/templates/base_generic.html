@@ -116,6 +116,8 @@
       </div>
     </footer>
 
+    <!-- Load js scripts-->
+    {% block js %}
 
     <script src="{% static 'assets/js/jquery.min.js' %}"></script>
 
@@ -130,5 +132,8 @@
     <script src="{% static 'assets/js/select2.min.js' %}"></script>
 
     <script src="{% static 'assets/js/main.js' %}"></script>
+
+    {% endblock %}
+
 	</body>
 </html>

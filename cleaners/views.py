@@ -18,7 +18,7 @@ def pick_up(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')  # TODO-me: Utilize django's contact form
+    return render(request, 'contact.html')
 
 
 def one_page(request):

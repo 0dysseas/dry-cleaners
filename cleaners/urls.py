@@ -9,6 +9,6 @@ urlpatterns = [
     url(r'^about$', views.about, name='about'),
     url(r'^services$', views.services, name='services'),
     url(r'^pick-up$', views.pick_up, name='pick_up'),
-    url(r'^about$', views.contact, name='contact'),
+    url(r'^contact$', views.contact, name='contact'),
     url(r'^one_page$', views.one_page, name='one_page'),  # TODO-me: To be removed?
 ]
