@@ -287,13 +287,6 @@ a {
           padding-left: 15px;
           padding-right: 15px; } }
 
-.probootstrap_section {
-  padding: 7em 0;
-  float: left;
-  width: 100%; }
-  .probootstrap_section.bg-light {
-    background: #ECECEC !important; }
-
 .probootstrap_feature-v1 {
   padding: 3em;
   -webkit-transition: .3s all ease;
@@ -571,4 +564,24 @@ color: #FFF;
 }
 .h1 small {
 font-size: 24px;
+}
+
+#description{
+  font-size:14pt;
+}
+
+.form-line{
+  border-right: 1px solid #B29999;
+}
+
+#footer{
+  background: #ffffff;
+  position: relative;
+  /*height: 100px;*/
+  padding: 150px;
+  margin: 100px;
+}
+
+#contact_col{
+  padding-left: 20px;
 }

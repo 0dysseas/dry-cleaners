@@ -17,7 +17,8 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-12">
                     <h1 class="h1">
-                        Get in touch! <small>Feel free to contact us</small></h1>
+                        Get in touch!
+                    </h1>
                 </div>
             </div>
         </div>
@@ -25,67 +26,63 @@
     <!-- END Contact header -->
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="well well-sm">
+    <div class="row">
+        <div class="col-md-8">
+            <form method = "POST" class="post-form">
+            {% csrf_token %}
 
-                    <form method = "POST" class="post-form">
-                    {% csrf_token %}
+                    <div class="well well-sm">
+                        <div class="row form-line">
+                            <div class="col-md-6">
 
-                    <div class="row">
-                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for='{{ form.name.id_for_label }}'>{{ form.name.label_tag }}</label>
+                                     <input type="text" class="form-control" id="name" placeholder='Enter your name'>
+                                </div>
+                                <!-- END name section -->
 
-                            <div class="form-group">
-                                <label for='{{ form.name.id_for_label }}'>{{ form.name.label_tag }}</label>
-                                 <input type="text" class="form-control" id="name" placeholder='Enter your name'>
+                                <div class="form-group">
+                                    <label for='{{ form.email_from.id_for_label }}'>{{ form.email_from.label_tag }}</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                        </span>
+                                        <input type="email" class="form-control" id="inputEmail" placeholder='Enter your email'>
+                                    </div>
+                                </div>
+                                <!-- END email section -->
                             </div>
-                            <!-- END name section -->
+                            <!-- END left column -->
 
-                            <div class="form-group">
-                                <label for='{{ form.email_from.id_for_label }}'>{{ form.email_from.label_tag }}</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-                                    </span>
-                                    <input type="email" class="form-control" id="inputEmail" placeholder='Enter your email'>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for ='{{ form.message.id_for_label }}'> {{ form.message.label_tag }}</label>
+                                     <textarea type="text" class="form-control" rows='4' cols='5' id="description" placeholder="Type your message"></textarea>
                                 </div>
                             </div>
-                            <!-- END email section -->
-                        </div>
-                        <!-- END left column -->
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for ='{{ form.message.id_for_label }}'> {{ form.message.label_tag }}</label>
-                                 <textarea  class="form-control" id="description" placeholder="Enter your message">
-                                 </textarea>
+                            <div class="col-md-12">
+                                    <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                                        Send</button>
                             </div>
-                        </div>
+                            </div>
+                            <!-- END message section -->
 
-                        <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
-                                    Send</button>
                         </div>
-                        </div>
-                        <!-- END message section -->
-
-                    </form>
-                    </div>
-            </div>
-
-            <div class="col-md-4">
-                <form>
-                <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
-                <address>
-                    <strong>Papanikolaou</strong><br>
-                    Neos kosmos<br>
-                    Athina<br>
-                    <abbr title="Phone">
-                        P:</abbr>
-                    210-4455889
-                </address>
-                </form>
-            </div>
+            </form>
         </div>
+        <div class="col-md-4" id="contact_col">
+            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+            <address>
+                <strong>Papanikolaou</strong><br>
+                Neos kosmos<br>
+                Athina<br>
+                <abbr title="Phone">
+                    Tel:</abbr>
+                210-4455889
+            </address>
+        </div>
+    </div>
+
     </div>
 
 
