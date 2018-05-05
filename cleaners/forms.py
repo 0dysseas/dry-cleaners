@@ -23,6 +23,5 @@ class ContactForm(forms.Form):
         validator = EmailValidator()
         try:
             validator(email)
-        except Exception:
-            raise ValidationError(_('Invalid e-mail address'),
-                                  code='invalid')
+        except ValidationError as val_error:
+            print(val_error) # TODO-me: Use the raise ValidationError(_('Invalid e-mail address'),code='invalid')  instead?
