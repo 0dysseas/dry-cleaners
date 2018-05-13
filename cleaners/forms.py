@@ -6,8 +6,8 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class ContactForm(forms.Form):
-    name = forms.CharField(label='Name',
-                           required=True)
+    subject = forms.CharField(label='Subject',
+                              required=True)
 
     email_from = forms.EmailField(label='E-mail address', required=True,
                                   error_messages={'invalid': 'Your e-mail does not have a valid format.'},
@@ -17,7 +17,7 @@ class ContactForm(forms.Form):
                               required=True)
 
     # Validate email
-    def clean_email_from(self):
+    def clean_email_from(self):  # TODO-me: Write tests for this
         email = self.cleaned_data['email_from']
 
         validator = EmailValidator()

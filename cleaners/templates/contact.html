@@ -28,7 +28,7 @@
     <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <form method = "POST" class="post-form">
+            <form action="" method = "POST" class="post-form">
             {% csrf_token %}
 
                     <div class="well well-sm">
@@ -36,17 +36,19 @@
                             <div class="col-md-6">
 
                                 <div class="form-group">
-                                    <label for='{{ form.name.id_for_label }}'>{{ form.name.label_tag }}</label>
-                                     <input type="text" class="form-control" id="name" placeholder='Enter your name'>
+                                    <label for="{{ form.subject.id_for_label }}">{{ form.subject.label_tag }}</label>
+                                     <input type="text" name="{{ form.subject.html_name }}" class="form-control"
+                                            id="subject" placeholder='Enter your subject'>
                                 </div>
-                                <!-- END name section -->
+                                <!-- END subject section -->
 
                                 <div class="form-group">
-                                    <label for='{{ form.email_from.id_for_label }}'>{{ form.email_from.label_tag }}</label>
+                                    <label for="{{ form.email_from.id_for_label }}">{{ form.email_from.label_tag }}</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                         </span>
-                                        <input type="email" class="form-control" id="inputEmail" placeholder='Enter your email'>
+                                        <input type="email" name="{{ form.email_from.html_name }}" class="form-control"
+                                               id="inputEmail" placeholder='Enter your email'>
                                     </div>
                                 </div>
                                 <!-- END email section -->
@@ -55,8 +57,12 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for ='{{ form.message.id_for_label }}'> {{ form.message.label_tag }}</label>
-                                     <textarea type="text" class="form-control" rows='5' cols='5' id="description" placeholder="Type your message"></textarea>
+                                    <label for ="{{ form.message.id_for_label }}"> {{ form.message.label_tag }}</label>
+                                     <textarea type="text" class="form-control" rows='5' cols='5'
+                                               name="{{ form.message.html_name }}" id="description"
+                                               placeholder="Type your message">
+
+                                     </textarea>
                                 </div>
                             </div>
 
