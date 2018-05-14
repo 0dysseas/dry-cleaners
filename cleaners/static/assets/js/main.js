@@ -181,6 +181,16 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 	};
 	datePicker();
 
+  var removeErrorBanner = function() {
+
+  	$("#inputEmail").on("focus", function() {
+   		if ( $( "#form-errors" ).length ) {
+        	$("#form-errors").hide();
+  		}
+
+  	});
+  }
+  removeErrorBanner();
 
 });
 

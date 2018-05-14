@@ -25,6 +25,19 @@
     </div>
     <!-- END Contact header -->
 
+    {% if form.errors %}
+        <div>
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger" id ="form-errors">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        </div>
+    {% endif %}
+    <!-- END Form errors section -->
+
     <div class="container">
     <div class="row">
         <div class="col-md-8">
@@ -90,7 +103,6 @@
     </div>
 
     </div>
-
 
 {% endblock %}
 
