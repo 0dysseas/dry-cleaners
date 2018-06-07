@@ -12,20 +12,20 @@
         </p>
           <a href="{% url 'cleaners:one_page' %}" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">See OnePage Version</a>
       </div>
+
       <div class="col-md probootstrap-animate">
-        <form action="#" class="probootstrap-form">
+        <form action=""  method="POST" class="probootstrap-form">
           <div class="form-group">
             <div class="row mb-3">
               <div class="col-md">
                 <div class="form-group">
-                  <label for="id_label_single">Carpet Type</label>
+                  <label for="{{ form.carpet_types.id_for_label }}">{{ form.carpet_types.label_tag }}</label>
 
                   <label for="id_label_single" style="width: 100%;">
                     <select class="js-example-basic-single js-states form-control" id="id_label_single" style="width: 100%;">
-                      <option value="Carpet1">Carpet1</option>
-                      <option value="Carpet2">Carpet2</option>
-                      <option value="Carpet3">Carpet3</option>
-                      <option value="Carpet4">Carpet4</option>
+                        {% for choice in form.carpet_types.field.choices %}
+                            <option value="{{choice.0}}">{{choice.1}}</option>
+                        {% endfor %}
                     </select>
                   </label>
 
@@ -34,21 +34,21 @@
               </div>
               <!-- END carpet type row -->
 
-              <div class="col-md">
-                <div class="form-group">
-                  <label for="id_label_single2">Carpet Type 2</label>
-                  <div class="probootstrap_select-wrap">
-                    <label for="id_label_single2" style="width: 100%;">
-                    <select class="js-example-basic-single js-states form-control" id="id_label_single2" style="width: 100%;">
-                      <option value="Carpet2_1">Carpet2_1</option>
-                      <option value="Carpet2_2">Carpet2_2</option>
-                      <option value="Carpet2_3">Carpet2_3</option>
-                    </select>
-                  </label>
-                  </div>
-                </div>
-              </div>
-            </div>
+{#              <div class="col-md">#}
+{#                <div class="form-group">#}
+{#                  <label for="id_label_single2">Carpet Type 2</label>#}
+{#                  <div class="probootstrap_select-wrap">#}
+{#                    <label for="id_label_single2" style="width: 100%;">#}
+{#                    <select class="js-example-basic-single js-states form-control" id="id_label_single2" style="width: 100%;">#}
+{#                      <option value="Carpet2_1">Carpet2_1</option>#}
+{#                      <option value="Carpet2_2">Carpet2_2</option>#}
+{#                      <option value="Carpet2_3">Carpet2_3</option>#}
+{#                    </select>#}
+{#                  </label>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
             <!-- END carpet type 2row -->
 
             <div class="row mb-5">

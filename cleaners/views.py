@@ -3,11 +3,23 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
-from .forms import ContactForm
+from .forms import CalculationForm, ContactForm
 
 
 def index(request):
-    return render(request, 'index.html')
+
+    if request.method == 'GET':
+        calculation_form = CalculationForm()
+    else:
+        calculation_form = CalculationForm(request.POST)
+
+        if calculation_form.is_valid():
+            carpet_types = calculation_form.cleaned_data['carpet_types']
+            meters = calculation_form.cleaned_data['meters']
+
+            return HttpResponseRedirect(reverse('cleaners:services'))
+
+    return render(request, 'index.html', {'form': calculation_form})
 
 
 def about(request):

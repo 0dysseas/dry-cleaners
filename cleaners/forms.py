@@ -4,6 +4,20 @@ from django.core.validators import EmailValidator
 from django.core.validators import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
+# Possible types of carpet
+CARPET_TYPES = (
+    ('NRM', 'Normal'),
+    ('SLK', 'Silk'),
+    ('WOL', 'Wool'),
+    ('PER', 'Persian')
+)
+
+
+class CalculationForm(forms.Form):
+    carpet_types = forms.ChoiceField(initial='NRM', choices=CARPET_TYPES, label='Carpet Types',)
+
+    meters = forms.FloatField(min_value=0)
+
 
 class ContactForm(forms.Form):
     subject = forms.CharField(label='Subject',
@@ -12,7 +26,7 @@ class ContactForm(forms.Form):
     email_from = forms.EmailField(label='E-mail address', required=True,
                                   max_length=100,
                                   error_messages={'invalid': 'Please enter a valid email address (e.g. joesmith@abc.com)'},
-                                  )
+                                  )  # TODO-me: Change the email address example
 
     message = forms.CharField(label='Message',
                               required=True)
