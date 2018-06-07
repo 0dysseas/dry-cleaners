@@ -14,7 +14,7 @@ CARPET_TYPE = (
 
 
 class CalculationForm(forms.Form):
-    carpet_types = forms.ChoiceField(initial='NRM', choices=CARPET_TYPES, label='Carpet Types',)
+    carpet_types = forms.ChoiceField(initial='NRM', choices=CARPET_TYPE, label='Carpet Types',)
 
     meters = forms.FloatField(min_value=0)
 
