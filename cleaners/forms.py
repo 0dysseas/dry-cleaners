@@ -5,7 +5,7 @@ from django.core.validators import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
 # Possible types of carpet
-CARPET_TYPES = (
+CARPET_TYPE = (
     ('NRM', 'Normal'),
     ('SLK', 'Silk'),
     ('WOL', 'Wool'),

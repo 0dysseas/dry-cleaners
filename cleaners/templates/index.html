@@ -54,28 +54,29 @@
             <div class="row mb-5">
               <div class="col-md">
                 <div class="form-group">
-                  <label for="probootstrap-height">Height</label>
+                  <label for="{{ form.meters.id_for_label }}">{{ form.meters.label_tag }}</label>
                   <div class="probootstrap-size-wrap">
-                    <input type="text" id="probootstrap-height-calc" class="form-control" placeholder="">
+                    <input type="text" id="meters" class="form-control" name="{{ form.meters.html_name }}"
+                           placeholder="Enter the size of your carpet">
                   </div>
                 </div>
               </div>
-              <div class="col-md">
-                <div class="form-group">
-                    <label for="probootstrap-width">Width</label>
-                    <div class="probootstrap-size-wrap">
-                        <input type="text" id="probootstrap-width-calc" class="form-control" placeholder="">
-                    </div>
-                </div>
-              </div>
+{#              <div class="col-md">#}
+{#                <div class="form-group">#}
+{#                    <label for="probootstrap-width">Width</label>#}
+{#                    <div class="probootstrap-size-wrap">#}
+{#                        <input type="text" id="probootstrap-width-calc" class="form-control" placeholder="">#}
+{#                    </div>#}
+{#                </div>#}
+{#              </div>#}
             </div>
             <!-- END height row -->
 
             <div class="row">
-              <div class="col-md">
-                <label for="option1" class="mr-5"><input type="radio" id="option1" name="direction">  Option1</label>
-                <label for="option2"><input type="radio" id="option2" name="direction">  Option2</label>
-              </div>
+{#              <div class="col-md">#}
+{#                <label for="option1" class="mr-5"><input type="radio" id="option1" name="direction">  Option1</label>#}
+{#                <label for="option2"><input type="radio" id="option2" name="direction">  Option2</label>#}
+{#              </div>#}
               <div class="col-md">
                 <input type="submit" value="Calculate" class="btn btn-primary btn-block">
               </div>
