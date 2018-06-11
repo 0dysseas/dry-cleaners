@@ -594,3 +594,13 @@ font-size: 24px;
   padding-left: 30px;
 }
 
+.well-block {
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #e9e6e8;
+    padding: 40px;
+}
+
+.well-title {
+    margin-bottom: 40px;
+}

@@ -1,0 +1,96 @@
+{% extends "base_generic.html" %}
+
+{% load static %}
+
+{% block title %}
+    <title>Pickup/Delivery</title>
+{% endblock%}
+
+{% block homeSection %}
+    <!-- Section to be inserted here -->
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well-block">  <!-- TODO-me: If page is NOT rendered after redirection then render the calculate form here!! -->
+                    <div class="well-title">
+                        <h2>RENDER CALCULATE FORM HERE</h2>
+                    </div>
+                    <div class="feature-block">
+                        <h3> FORM HERE</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Calculate start -->
+
+            <div class="col-md-6">
+                <div class="well-block">
+                    <div class="well-title">
+                        <h2>Questions? Book an Appointment</h2>
+                    </div>
+                    <form>
+                        <!-- Form start -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label" for="name">Name</label>
+                                    <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label" for="email">Email</label>
+                                    <input id="email" name="email" type="text" placeholder="E-Mail" class="form-control input-md">
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="col-md-6">
+                              <label for="probootstrap-date-departure">Preferred Date</label>
+                              <div class="probootstrap-date-wrap">
+                                <input type="text" id="probootstrap-date-departure" class="form-control"
+                                       placeholder="Click to select a date">
+                              </div>
+                            </div>
+                            <!-- Select Basic -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label" for="time">Preferred Time</label>
+                                    <select id="time" name="time" class="form-control">
+                                        <option value="8:00 to 9:00">8:00 to 9:00</option>
+                                        <option value="9:00 to 10:00">9:00 to 10:00</option>
+                                        <option value="10:00 to 1:00">10:00 to 1:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Select Basic -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="appointmentfor">Appointment For</label>
+                                    <select id="appointmentfor" name="appointmentfor" class="form-control">
+                                        <option value="Service#1">Service#1</option>
+                                        <option value="Service#2">Service#2</option>
+                                        <option value="Service#3">Service#3</option>
+                                        <option value="Service#4">Service#4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Button -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button id="singlebutton" name="singlebutton" class="btn btn-default">Make An Appointment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Pickup form end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

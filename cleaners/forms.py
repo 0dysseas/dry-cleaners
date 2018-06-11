@@ -6,6 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 
 # Possible types of carpet
 CARPET_TYPE = (
+    ('', 'Select a carpet type'),
     ('NRM', 'Normal'),
     ('SLK', 'Silk'),
     ('WOL', 'Wool'),
@@ -14,7 +15,7 @@ CARPET_TYPE = (
 
 
 class CalculationForm(forms.Form):
-    carpet_types = forms.ChoiceField(initial='NRM', choices=CARPET_TYPE, label='Carpet Types',)
+    carpet_types = forms.ChoiceField(initial='', choices=CARPET_TYPE, label='Carpet Types',)
 
     meters = forms.FloatField(min_value=0)
 
@@ -41,3 +42,12 @@ class ContactForm(forms.Form):
             raise ValidationError(_('Your email address is invalid. Please enter a correct one'))
 
         return email
+
+
+class PickupForm(forms.Form):  # TODO-me: Used to render the pickup form in the pickup/delivery page
+    name = forms.CharField(label='Name', required=True)
+
+    customer_email = forms.EmailField(label='E-mail address', required=True,
+                                      max_length=100,
+                                      error_messages={'invalid': 'Please enter a valid email address (e.g. joesmith@abc.com)'},
+                                      )  # TODO-me: Change the email address example

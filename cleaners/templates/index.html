@@ -15,7 +15,8 @@
       </div>
 
       <div class="col-md probootstrap-animate">
-        <form action=""  method="POST" class="probootstrap-form">
+        <form action="{% url 'cleaners:pick_up' %}"  method="POST" class="probootstrap-form">
+        {% csrf_token %}
           <div class="form-group">
             <div class="row mb-3">
               <div class="col-md">

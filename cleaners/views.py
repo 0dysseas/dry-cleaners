@@ -31,7 +31,7 @@ def services(request):
 
 
 def pick_up(request):
-    return render(request, 'city-guides.html')
+    return render(request, 'pickup_delivery.html')
 
 
 def thank_you(request):

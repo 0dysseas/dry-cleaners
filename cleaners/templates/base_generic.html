@@ -39,7 +39,7 @@
     <!-- START nav -->
     <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
       <div class="container">
-        <a class="navbar-brand" href="{% url 'cleaners:index' %}">Magic Carpet</a>
+        <a class="navbar-brand" href="{% url 'cleaners:index' %}">Dream Clean</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-menu" aria-controls="probootstrap-menu" aria-expanded="false" aria-label="Toggle navigation">
           <span><i class="ion-navicon"></i></span>
         </button>
@@ -56,14 +56,12 @@
     </nav>
     <!-- END nav -->
 
-    <!-- START Home nav -->
+    <!-- START Home section -->
     <section class="probootstrap-cover overflow-hidden relative"  style="background-image: url({% static 'assets/images/img_main.jpg' %});" data-stellar-background-ratio="0.5"  id="section-home">
       <div class="overlay"></div>
         {% block homeSection %}{% endblock %}
     </section>
     <!-- END Home Section -->
-
-
 
     {% block content %}{% endblock %}
 
