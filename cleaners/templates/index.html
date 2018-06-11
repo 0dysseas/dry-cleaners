@@ -10,7 +10,8 @@
         <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Welcome</h2>
         <p class="lead mb-5 probootstrap-animate">
         </p>
-          <a href="{% url 'cleaners:one_page' %}" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">See OnePage Version</a>
+          <a href="{% url 'cleaners:one_page' %}" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase
+          d-lg-inline d-md-inline d-sm-block d-block mb-3">See OnePage Version</a>
       </div>
 
       <div class="col-md probootstrap-animate">
@@ -52,7 +53,7 @@
             <!-- END carpet type 2row -->
 
             <div class="row mb-5">
-              <div class="col-md">
+              <div class="col-md meters-column">
                 <div class="form-group">
                   <label for="{{ form.meters.id_for_label }}">{{ form.meters.label_tag }}</label>
                   <div class="probootstrap-size-wrap">
