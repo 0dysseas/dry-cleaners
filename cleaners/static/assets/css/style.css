@@ -590,7 +590,7 @@ font-size: 24px;
   padding-left: 50px;
 }
 
-.calculate, .meters-column{
+.meters-column{
   padding-left: 30px;
 }
 
@@ -607,4 +607,12 @@ font-size: 24px;
 
 #calc_main{
   margin-left: -12px;
+}
+
+.display-price{
+   background: #1b1e21;
+}
+
+.calculate {
+    margin-top: 60px;
 }

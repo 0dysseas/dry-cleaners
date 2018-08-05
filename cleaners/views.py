@@ -15,7 +15,8 @@ def index(request):
 
         if calculation_form.is_valid():
             carpet_types = calculation_form.cleaned_data['carpet_types']
-            meters = calculation_form.cleaned_data['meters']
+            length = calculation_form.cleaned_data['length']
+            width = calculation_form.cleaned_data['width']
 
             return HttpResponseRedirect(reverse('cleaners:services'))
 
