@@ -604,3 +604,7 @@ font-size: 24px;
 .well-title {
     margin-bottom: 40px;
 }
+
+#calc_main{
+  margin-left: -12px;
+}
