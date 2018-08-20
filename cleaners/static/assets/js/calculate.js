@@ -27,13 +27,11 @@ $(document).ready(function($) {
     };
 
     $("#calculate_btn").on('click',function(){
-        $('.probootstrap-form').submit(false);
+        // $('.probootstrap-form').submit(false)
 
         let cost=calculatePrice();
-        $("<div class='display-price'></div>").insertAfter( ".carpet-width" ); //TODO-me: Style this!
-        $(".display-price").html(cost);
 
-        $("#calculate_btn").val('Contact us!');
+        $("#service_cost").val(cost);
 
         $("#main_form").submit();
 

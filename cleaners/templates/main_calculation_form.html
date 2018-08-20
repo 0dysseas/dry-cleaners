@@ -1,5 +1,3 @@
-
-
 <form action="{% url 'cleaners:pick_up' %}"  method="POST" id="main_form" class="probootstrap-form">
 {% csrf_token %}
 <div class="form-group">
@@ -46,6 +44,8 @@
   </div>
 </div>
 <!-- END width row -->
+
+<input type="hidden" id="service_cost" name="service_cost" value="">
 
 <div class="row">
   <div class="col-sm-12 calculate">
