@@ -35,7 +35,7 @@ $(document).ready(function($) {
 
         $("#calculate_btn").val('Contact us!');
 
-        //TODO-me: Submit form now via jquery
+        $("#main_form").submit();
 
     });
 

@@ -1,0 +1,56 @@
+
+
+<form action="{% url 'cleaners:pick_up' %}"  method="POST" id="main_form" class="probootstrap-form">
+{% csrf_token %}
+<div class="form-group">
+<div class="row">
+  <div class="col-md">
+    <div class="form-group">
+      <label for="{{ form.carpet_types.id_for_label }}">{{ form.carpet_types.label_tag }}</label>
+
+      <label for="id_label_single" style="width: 100%;">
+        <select class="js-example-basic-single js-states form-control" id="id_label_single" style="width: 100%;">
+            {% for choice in form.carpet_types.field.choices %}
+                <option value="{{choice.0}}">{{choice.1}}</option>
+            {% endfor %}
+        </select>
+      </label>
+
+     </div>
+  </div>
+</div>
+  <!-- END carpet type row -->
+
+<div class="row carpet-length">
+  <div class="col-md meters-column">
+    <div class="form-group" id="calc_main">
+      <label for="{{ form.length.id_for_label }}">{{ form.length.label_tag }}</label>
+      <div class="probootstrap-size-wrap">
+        <input type="text" id="length" class="form-control" name="{{ form.length.html_name }}"
+               placeholder="Enter the length of your carpet">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END length row -->
+
+<div class="row carpet-width">
+  <div class="col-md meters-column">
+    <div class="form-group" id="calc_main">
+      <label for="{{ form.width.id_for_label }}">{{ form.width.label_tag }}</label>
+      <div class="probootstrap-size-wrap">
+        <input type="text" id="width" class="form-control" name="{{ form.width.html_name }}"
+               placeholder="Enter the width of your carpet">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END width row -->
+
+<div class="row">
+  <div class="col-sm-12 calculate">
+    <input type="submit" id="calculate_btn" value="Calculate" class="btn btn-primary btn-block">
+  </div>
+</div>
+</div>
+</form> <!-- END form -->

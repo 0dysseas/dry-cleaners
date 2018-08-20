@@ -10,15 +10,15 @@ def index(request):
 
     if request.method == 'GET':
         calculation_form = CalculationForm()
-    else:
-        calculation_form = CalculationForm(request.POST)
-
-        if calculation_form.is_valid():
-            carpet_types = calculation_form.cleaned_data['carpet_types']
-            length = calculation_form.cleaned_data['length']
-            width = calculation_form.cleaned_data['width']
-
-            return HttpResponseRedirect(reverse('cleaners:services'))
+    # else:
+    #     calculation_form = CalculationForm(request.POST)  # TODO-me: Is this POST handling needed?
+    #
+    #     if calculation_form.is_valid():
+    #         carpet_types = calculation_form.cleaned_data['carpet_types']
+    #         length = calculation_form.cleaned_data['length']
+    #         width = calculation_form.cleaned_data['width']
+    #
+    #         return HttpResponseRedirect(reverse('cleaners:services'))
 
     return render(request, 'index.html', {'form': calculation_form})
 
@@ -32,7 +32,20 @@ def services(request):
 
 
 def pick_up(request):
-    return render(request, 'pickup_delivery.html')
+    # If this is a GET request create the calculation form
+    if request.method == 'GET':
+        calculation_form_pickup = CalculationForm()
+    else:
+        calculation_form_pickup = CalculationForm(request.POST)
+
+        if calculation_form_pickup.is_valid():
+            carpet_types = calculation_form_pickup.cleaned_data['carpet_types']
+            length = calculation_form_pickup.cleaned_data['length']
+            width = calculation_form_pickup.cleaned_data['width']
+
+            return HttpResponseRedirect(reverse('cleaners:pick_up'))
+
+    return render(request, 'pickup_delivery.html', {'form': calculation_form_pickup})
 
 
 def thank_you(request):
@@ -42,7 +55,6 @@ def thank_you(request):
 # Using function-based view instead of the generic class based FormView in order to have
 # better control of the form processing
 def contact(request):
-
     # If this is a GET request create the contact form
     if request.method == 'GET':
         contact_form = ContactForm()
