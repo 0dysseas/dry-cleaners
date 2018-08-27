@@ -6,13 +6,14 @@
     <div class="form-group">
       <label for="{{ form.carpet_types.id_for_label }}">{{ form.carpet_types.label_tag }}</label>
 
-      <label for="id_label_single" style="width: 100%;">
-        <select class="js-example-basic-single js-states form-control" id="id_label_single" style="width: 100%;">
+      <!-- <label for="id_label_single" style="width: 100%;"> -->
+        <select class="js-example-basic-single js-states form-control" id="id_label_single" name="dd-carpets"
+                style="width: 100%;">
             {% for choice in form.carpet_types.field.choices %}
-                <option value="{{choice.0}}">{{choice.1}}</option>
+                <option value="{{choice.0}}" name="{{form.carpet_types.html_name}}">{{choice.1}}</option>
             {% endfor %}
         </select>
-      </label>
+      <!-- </label> -->
 
      </div>
   </div>
@@ -25,7 +26,7 @@
       <label for="{{ form.length.id_for_label }}">{{ form.length.label_tag }}</label>
       <div class="probootstrap-size-wrap">
         <input type="text" id="length" class="form-control" name="{{ form.length.html_name }}"
-               placeholder="Enter the length of your carpet">
+               placeholder="Enter the lencdgth of your carpet">
       </div>
     </div>
   </div>

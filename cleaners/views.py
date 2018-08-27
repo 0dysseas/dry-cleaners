@@ -38,9 +38,9 @@ def pick_up(request):
     else:
         calculation_form_pickup = CalculationForm(request.POST)
 
-        if calculation_form_pickup.is_valid():  # TODO-me: Form is invalid that's why it doesn't redirect
-            carpet_types = calculation_form_pickup.cleaned_data['carpet_types'] # TODO-me: This doesn't get selected so the form isn't valid
-            length = calculation_form_pickup.cleaned_data['length'] #The above doesnt get selected because of the select2 js
+        if calculation_form_pickup.is_valid():
+            carpet_type = calculation_form_pickup.cleaned_data['dd-carpets']
+            length = calculation_form_pickup.cleaned_data['length']
             width = calculation_form_pickup.cleaned_data['width']
 
             return HttpResponseRedirect(reverse('cleaners:contact')) #TODO-me: REdirect to the pickup page but show the already calculated cost(hidden input in the form) NOT THE FORM!
