@@ -39,7 +39,7 @@ def pick_up(request):
         calculation_form_pickup = CalculationForm(request.POST)
 
         if calculation_form_pickup.is_valid():
-            carpet_type = calculation_form_pickup.cleaned_data['dd-carpets']
+            carpet_type = calculation_form_pickup.cleaned_data['carpet_types']
             length = calculation_form_pickup.cleaned_data['length']
             width = calculation_form_pickup.cleaned_data['width']
 
