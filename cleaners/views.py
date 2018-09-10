@@ -1,6 +1,6 @@
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse
 
 from .forms import CalculationForm, ContactForm
@@ -42,8 +42,10 @@ def pick_up(request):
             carpet_type = calculation_form_pickup.cleaned_data['carpet_types']
             length = calculation_form_pickup.cleaned_data['length']
             width = calculation_form_pickup.cleaned_data['width']
+            service_cost = request.POST.get('service_cost')
 
-            return HttpResponseRedirect(reverse('cleaners:contact')) #TODO-me: REdirect to the pickup page but show the already calculated cost(hidden input in the form) NOT THE FORM!
+            return render(request, 'contact.html', {'service_cost': service_cost, 'carpet_type': carpet_type,
+                                                    'length': length, 'width': width})
 
     return render(request, 'pickup_delivery.html', {'form': calculation_form_pickup})
 

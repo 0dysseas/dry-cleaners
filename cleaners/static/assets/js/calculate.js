@@ -27,7 +27,6 @@ $(document).ready(function($) {
     };
 
     $("#calculate_btn").on('click',function(){
-        // $('.probootstrap-form').submit(false)
 
         let cost=calculatePrice();
 

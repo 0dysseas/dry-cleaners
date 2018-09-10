@@ -17,7 +17,11 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-12">
                     <h1 class="h1">
-                        Get in touch!
+                        {% if service_cost %}
+                            Picking up your carpet will cost {{service_cost}} euros. Get in touch!
+                        {% else %}
+                            Get in touch!
+                        {% endif %}
                     </h1>
                 </div>
             </div>
