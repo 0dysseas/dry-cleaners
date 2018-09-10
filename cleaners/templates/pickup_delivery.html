@@ -17,9 +17,11 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="well-block">
-
-                {% include "main_calculation_form.html" %}
-
+                {% if service_cost %}
+                    Picking up your carpet will approximately cost {{service_cost}} euros. Get in touch!
+                {% else %}
+                    {% include "main_calculation_form.html" %}
+                {% endif %}
                 </div>
             </div>
             <!-- Calculate end -->
@@ -27,7 +29,7 @@
             <div class="col-md-6">
                 <div class="well-block pickup-block">
                     <div class="well-title">
-                        <h2>Questions? Book an Appointment</h2>
+                        <h2>Book an Appointment</h2>
                     </div>
                     <form>
                         <!-- Form start -->
@@ -35,7 +37,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label" for="name">Name</label>
-                                    <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+                                    <input id="name" name="name" type="text" placeholder="Full Name" class="form-control input-md">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label" for="name">Telephone</label>
+                                    <input id="telephone" name="telephone" type="text" placeholder="Telephone" class="form-control input-md">
                                 </div>
                             </div>
                             <!-- Text input-->
@@ -54,7 +62,7 @@
                               </div>
                             </div>
                             <!-- Select Basic -->
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label" for="time">Preferred Time</label>
                                     <select id="time" name="time" class="form-control">
@@ -64,16 +72,12 @@
                                     </select>
                                 </div>
                             </div>
-                            <!-- Select Basic -->
+                            <!-- Text input -->
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label" for="appointmentfor">Appointment For</label>
-                                    <select id="appointmentfor" name="appointmentfor" class="form-control">
-                                        <option value="Service#1">Service#1</option>
-                                        <option value="Service#2">Service#2</option>
-                                        <option value="Service#3">Service#3</option>
-                                        <option value="Service#4">Service#4</option>
-                                    </select>
+                                    <input type="text" id="appointmentfor" class="form-control input-md"
+                                       placeholder="What do you want to tell us?">
                                 </div>
                             </div>
                             <!-- Button -->
